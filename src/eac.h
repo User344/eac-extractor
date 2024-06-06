@@ -1,16 +1,17 @@
 #pragma once
-#include <stdint.h>
+#include <cstdint>
 #include <vector>
+#include <span>
 
 namespace eac {
 
-	// Decrypt buffer using EAC specific encryption.
-	void decrypt( const void* input, size_t input_size, void* output, size_t output_size );
+    // Decrypt buffer using EAC specific encryption.
+    void decrypt( const std::span< uint8_t const >& input, const std::span< uint8_t >& output );
 
-	inline std::vector< uint8_t > decrypt( const std::vector< uint8_t >& input ) {
-		std::vector< uint8_t > output( input.size( ) );
-		decrypt( input.data( ), input.size( ), output.data( ), output.size( ) );
-		return output;
-	}
+    inline std::vector< uint8_t > decrypt( const std::span< uint8_t const >& input ) {
+        std::vector< uint8_t > output( input.size( ) );
+        decrypt( input, { output.data( ), output.size( ) } );
+        return output;
+    }
 
 } // namespace eac

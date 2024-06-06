@@ -4,10 +4,11 @@ project(eac-extractor LANGUAGES CXX VERSION 1.0)
 # For VIM
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
-set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} /MT")
-set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} /MTd")
-add_definitions("-DCURL_STATICLIB")
+if (MSVC)
+    set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+    set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} /MT")
+    set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} /MTd")
+endif()
 
 add_executable(${PROJECT_NAME} src/main.cpp src/eac.cpp src/parser.cpp src/dumper.cpp src/common/io.cpp src/common/pe.cpp src/common/memory.cpp src/common/net.cpp)
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_23)

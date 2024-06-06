@@ -3,6 +3,6 @@
 
 namespace dumper {
 
-	bool dump( const std::string& path, void* image );
+    bool dump( const std::string& path, void* image );
 
 }
