@@ -1,6 +1,6 @@
-#include "dumper.h"
-#include "common/io.h"
-#include "common/pe.h"
+#include "dumper.hpp"
+#include "common/io.hpp"
+#include "common/pe.hpp"
 
 #include <vector>
 #include <print>

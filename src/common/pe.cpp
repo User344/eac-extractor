@@ -1,5 +1,5 @@
-#include "pe.h"
-#include "memory.h"
+#include "pe.hpp"
+#include "memory.hpp"
 
 #include <span>
 

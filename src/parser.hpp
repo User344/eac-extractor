@@ -1,5 +1,5 @@
 #pragma once
-#include "common/pe.h"
+#include "common/pe.hpp"
 #include <vector>
 
 struct parser_module_s {

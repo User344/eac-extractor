@@ -1,4 +1,4 @@
-#include "net.h"
+#include "net.hpp"
 #include <curl/easy.h>
 
 bool net::init( ) { return curl_global_init( CURL_GLOBAL_ALL ) == CURLE_OK; }

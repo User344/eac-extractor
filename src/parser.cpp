@@ -1,6 +1,6 @@
-#include "parser.h"
-#include "eac.h"
-#include "common/memory.h"
+#include "parser.hpp"
+#include "eac.hpp"
+#include "common/memory.hpp"
 
 #include <assert.h>
 #include <print>

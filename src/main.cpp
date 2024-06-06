@@ -2,12 +2,12 @@
 #include <print>
 #include <filesystem>
 
-#include "dumper.h"
-#include "eac.h"
-#include "parser.h"
+#include "dumper.hpp"
+#include "eac.hpp"
+#include "parser.hpp"
 
-#include "common/net.h"
-#include "common/io.h"
+#include "common/net.hpp"
+#include "common/io.hpp"
 
 #include <Windows.h>
 

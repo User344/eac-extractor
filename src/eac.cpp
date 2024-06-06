@@ -1,4 +1,4 @@
-#include "eac.h"
+#include "eac.hpp"
 
 void eac::decrypt( const std::span< uint8_t const >& input, const std::span< uint8_t >& output ) {
 
